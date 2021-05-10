@@ -5,7 +5,6 @@ import Main from '../layout/Main'
 import '../style/responsive.css'
 // import '../style/style.css'
  import '../style/home.css'
- 
 
 function MyApp({ Component, pageProps }: AppProps) {
     // if (typeof window === 'undefined') {

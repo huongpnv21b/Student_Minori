@@ -30,8 +30,7 @@ export default function Header() {
                                     <Link href={MENU_ITEM.HOME}>
                                         <a>Trang chủ</a>
                                     </Link>
-                                </li>
-                                
+                                </li>                     
                                 <li className={getClassName(location.pathname.includes(MENU_ITEM.SIGN_UP))}>
                                     <Link href={MENU_ITEM.SIGN_UP}>
                                         <a>Đăng ký học</a>

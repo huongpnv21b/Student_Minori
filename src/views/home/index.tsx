@@ -8,17 +8,13 @@ import React, { useState, useEffect } from 'react';
 export default function Home() {
     const [data, setData] = useState([]);
     const getData = async () => {
-        const URL = 'http://192.168.10.215:11000/api/majors';
-        axios
-          .get(URL)
-          .then(async (response) => {
-            setData(response.data);
-            
-          })
-          .catch((error) => {
-            console.log('error ' + error);
-          });
-      };
+        fetch('http://192.168.10.215:11000/api/majors')
+      .then(res => res.json())
+      .then((data) => {
+          setData(data )
+      })
+      .catch(console.log)
+    };
       useEffect(() => {
         getData();
     }, []);
@@ -80,10 +76,8 @@ export default function Home() {
                                 </div>
                                 </div>
                                 <div className="float-right">
-                                {/* <Link href={MENU_ITEM.SIGN_UP}>
-                                    <a href="examples">Đăng kí</a>     
-                                </Link> */}
-                                <Link href={{ pathname: MENU_ITEM.SIGN_UP, query: { major: datas.id }}}><a>here</a></Link>
+                                
+                                <Link href={{ pathname: MENU_ITEM.SIGN_UP, query: {major:datas.id} }}><a>Đăng kí</a></Link>
                                  {/* <Link href={MENU_ITEM.SIGN_UP} params={{ major: datas.id }}>Đăng kí</Link> */}
                                                             
                                 </div>

@@ -17,7 +17,6 @@ class MyDocument extends Document {
                     <link href='/css/font-awesome.css' rel='stylesheet' />
                     <link href='/css/jquery.countdown.css' rel='stylesheet' />
                     <link href='/css/docs.css' rel='stylesheet' />
-                    <link href='/style/home.css' rel='stylesheet' />
                 </Head>
                 <body>
                     <Main />
